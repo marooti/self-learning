@@ -1,0 +1,10 @@
+<div >
+    <button (click)="count = count + 1">Add Number</button>
+  </div>
+  <div style="width: 200px; text-align: center; margin-top: 20px; margin-bottom: 20px;" [ngClass]="getBackgroundColorClass(count)">
+    <span class="span">{{ count }}</span>
+  </div>
+
+  <button (click)="count = 0">Reset </button>
+
+  
