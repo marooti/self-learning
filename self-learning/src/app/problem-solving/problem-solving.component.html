@@ -1,0 +1,21 @@
+<!-- Binary-Tree -->
+<!-- src/app/binary-search-tree/binary-search-tree.component.html -->
+<div *ngIf="root">
+    <h2>Binary Search Tree</h2>
+    <ul>
+        <li>{{root.value}}</li>
+        <ng-container *ngIf="root.left">
+            {{root.left}}
+            <!-- <app-binary-search-tree ></app-binary-search-tree> -->
+        </ng-container>
+        <ng-container *ngIf="root.right">
+            <!-- <app-binary-search-tree [bstService]="root.right"></app-binary-search-tree> -->
+        </ng-container>
+    </ul>
+</div>
+
+<!-- Two Sum function -->
+
+<button (click)="twoSumResultFunction()">
+   TwoSum
+</button>
