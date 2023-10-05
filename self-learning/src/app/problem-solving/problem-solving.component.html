@@ -16,6 +16,17 @@
 
 <!-- Two Sum function -->
 
-<button (click)="twoSumResultFunction()">
-   TwoSum
+<button (click)="twoSum()">
+    TwoSum
 </button>
+<div>
+    <div>
+        <input type="text" [(ngModel)]="firstNum">
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="secondNum">
+    </div>
+    <button (click)="addTwoNum()">
+        TwoSum
+    </button>
+</div>

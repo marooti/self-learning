@@ -7,6 +7,7 @@ import { CounterComponent } from './pages/counter/counter.component';
 import { RoutingComponent } from './pages/routing/routing.component';
 import { VideoCallingComponent } from './video-calling/video-calling.component';
 import { ProblemSolvingComponent } from './problem-solving/problem-solving.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: RoutingComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forChild(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,12 +16,12 @@ class TreeNode {
 })
 export class ProblemSolvingComponent {
   // Two Sum
-
   // Tree Node
   root: TreeNode | null = null;
-
+  // Add Two Sum
+  firstNum: any;
+  secondNum: any;
   constructor() { }
-
   ngOnInit(): void {
 
     // Create a binary search tree
@@ -37,7 +37,6 @@ export class ProblemSolvingComponent {
       console.log(`Value not found.`);
     }
   }
-
   insert(root: TreeNode | null, value: number): TreeNode {
     if (!root) {
       return new TreeNode(value);
@@ -51,52 +50,31 @@ export class ProblemSolvingComponent {
 
     return root;
   }
-
   search(root: TreeNode | null, value: number): TreeNode | null {
     if (!root || root.value === value) {
       return root;
     }
-
     if (value < root.value) {
       return this.search(root.left, value);
     }
-
     return this.search(root.right, value);
   }
-
-  twoSumResultFunction() {
-    // Two Sum
+  // Two Sum
+  twoSum() {
     const nums = [2, 7, 11, 15];
     const target = 9;
-    const twoSumResult = this.twoSum(nums, target);
-    if (twoSumResult !== null) {
-      console.log(`Indices of two numbers that add up to ${target}: [${twoSumResult}]`);
-    } else {
-      console.log(`No solution found.`);
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] + nums[i + 1] == target) {
+        console.log("These indices have values that sum up to the target:", [nums[i], nums[i + 1]]);
+      }
     }
   }
-
-  // Two Sum
-  twoSum(nums: number[], target: number) {
-    // Create a map to store the numbers and their indices
-    const numMap = new Map<number, number>();
-    console.log("Map Value :", numMap)
-    // Iterate through the array
-    for (let i = 0; i < nums.length; i++) {
-      const complement = target - nums[i];
-      console.log("complemet :", complement)
-      // Check if the complement exists in the map
-      if (numMap.has(complement)) {
-        // Return the indices of the two numbers
-        return [numMap.get(complement)!, i];
-      }
-
-      // Store the current number and its index in the map
-      numMap.set(nums[i], i);
-    }
-
-    // If no solution is found, return null
-    return null;
+  // Add Two Sum
+  addTwoNum() {
+    let val = parseFloat(this.firstNum);
+    let val1 = parseFloat(this.secondNum);
+    let sum = val + val1;
+    console.log("sum of two num:", sum)
   }
 
 }
